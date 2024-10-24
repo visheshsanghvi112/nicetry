@@ -6,24 +6,75 @@
 <title>Meeting Invitation</title>
 <style>
     body {
-        font-family: Arial, sans-serif;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
         text-align: center;
         margin-top: 100px;
+        background-color: #fdf3f2;
+        background-image: radial-gradient(circle at top right, #ffb6c1, #fdf3f2);
+        color: #555;
+        transition: background-color 0.5s ease;
     }
+
     h1 {
-        color: #333;
+        color: #ff69b4;
+        font-size: 3em;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        margin-bottom: 30px;
     }
+
     button {
-        margin: 10px;
-        padding: 10px 20px;
-        font-size: 16px;
+        background-color: #ff69b4;
+        border: none;
+        color: white;
+        padding: 15px 30px;
+        font-size: 18px;
+        font-weight: bold;
         cursor: pointer;
+        border-radius: 30px;
+        box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease, transform 0.2s ease;
         position: relative;
     }
+
+    button:hover {
+        background-color: #ff1493;
+        transform: scale(1.05);
+    }
+
+    button:active {
+        transform: scale(0.95);
+        background-color: #e0115f;
+    }
+
+    button:after {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        background: rgba(255, 182, 193, 0.3);
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        z-index: -1;
+    }
+
+    button:hover:after {
+        top: -15px;
+        left: -15px;
+        right: -15px;
+        bottom: -15px;
+        opacity: 1;
+    }
+
+    button:focus {
+        outline: none;
+    }
 </style>
+
 </head>
 <body>
-    <h1>Hey, would you like to meet this evening?</h1>
+    <h1>Hey, would you like to meet on Sunday?</h1>
     <button onclick="yesResponse()">Yes</button>
     <button id="noButton" onmouseenter="startMove()">No</button>
 
